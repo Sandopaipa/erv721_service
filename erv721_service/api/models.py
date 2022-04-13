@@ -8,7 +8,7 @@ class Token(models.Model):
     tx_hash - хэш транзакции создания токена
     media_url - урл с произвольным изображением
     owner - адрес пользователя в сети Ethereum"""
-    id = models.CharField(max_length=20, primary_key=True)
+    id = models.AutoField
     unique_hash = models.CharField(max_length=20, unique=True)
     tx_hash = models.CharField(max_length=34, unique=True)
     media_url = models.URLField
